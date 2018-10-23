@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# expecting <site-clone-url> as arg.
+if [ "$#" -ne 1 ]; then
+    echo "Expecting args: <site-clone-url>"
+    exit 1
+fi
+
+clone_url=$1
+
+cd ${C9_PATH}
+
+# clone static site repo
+git clone ${clone_url} site
+
+# git clone status
+status=$?
+
+cd -
+
+# exit if creation of new post fails
+if [[ $status -ne "0" ]];
+then
+    echo "unable to create post"
+    exit $status
+fi

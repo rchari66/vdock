@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# expecting <blog-clone-url> as arg.
+if [ "$#" -ne 1 ]; then
+    echo "Expecting args: <blog-clone-url>"
+    exit 1
+fi
+
+clone_url=$1
+
+# goto blog dir and create post
+cd ${C9_PATH}
+
+# clone blog(code) repo
+git clone --recursive ${clone_url} blog
+status=$?
+
+cd -
+
+# exit if git clone fails
+if [[ $status -ne "0" ]];
+then
+    echo "unable to clone blog" >> ${LOG_FILE}
+    exit $status
+fi

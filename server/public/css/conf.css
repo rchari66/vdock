@@ -1,0 +1,12 @@
+#set-config div {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-left: 30%;
+    margin-top: 20%;
+    border: none;
+}
+
+button#update-config {
+    margin-left: 15%;
+}

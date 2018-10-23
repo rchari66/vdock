@@ -1,0 +1,13 @@
+#publish-changes div {
+    width: 50%;
+    height: 60%;
+    margin: auto;
+    margin-left: 30%;
+    margin-top: 20%;
+    border: none;
+}
+
+div div #set-config-repos {
+    margin: 0%;
+    width: 100%;
+}
