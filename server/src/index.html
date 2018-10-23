@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vdock-hugo</title>
+	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+	<link rel="stylesheet" type="text/css" href="public/css/post.css">
+	<link rel="stylesheet" type="text/css" href="public/css/conf.css">
+	<link rel="stylesheet" type="text/css" href="public/css/publish.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="sidebar">
+	    <nav>
+	        <ul class="menu">
+	            <li class="menu-item preview"> <i class="fa fa-2x fa-eye     " aria-hidden="true"></i>preview </li>
+	            <li class="menu-item code"> <i class="fa fa-2x fa-code    " aria-hidden="true"></i>&nbsp;code </li>
+	            <li class="menu-item post"> <i class="fa fa-2x fa-plus " aria-hidden="true"></i> &nbsp;post </li>
+	            <li class="menu-item publish"> <i class="fa fa-2x fa-rocket    " aria-hidden="true"></i>publish </li>
+	            
+	            <li class="menu-item split"> <i class="fa fa-2x fa-columns " aria-hidden="true"></i>&nbsp;split </li>
+	            <li class="menu-item config"> <i class="fa fa-2x fa-cogs    " aria-hidden="true"></i>&nbsp;config </li>
+	            <li class="menu-item help"> <i class="fa fa-2x fa-info-circle " aria-hidden="true"></i>&nbsp;help </li>
+	        </ul>
+	    </nav>
+    </div>
+	<main id="main">
+		<!-- Adding ide first for better ui experience -->
+		<div class="main-view code">
+			<iframe src="ide.html"></iframe>
+		</div>
+		
+		<div class="main-view preview">
+			<iframe id="preview" src="http://localhost:8286/preview/"></iframe>
+		</div>
+
+		<div class="main-view post">
+			<div id="new-post">
+				<div>
+					<input v-model="postname" placeholder="post name">
+					<button v-on:click="createPost">Create Post</button>
+					<p> {{status}} </p>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-view publish">
+			<div id="publish-changes">
+				<div>
+					<input v-model="commitMessage" placeholder="Enter commit message">
+					<button v-on:click="publishChanges">Publish Changes</button>
+					<p> {{ notification }} </p>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-view split">
+			<iframe id="preview" src="https://techtaste.me/categories/"></iframe>
+		</div>
+		
+		<div class="main-view config">
+			<div id="set-config">
+				<div>
+					<!-- <span>Enter your email : </span>
+					<input v-model="email" placeholder="Enter your email">
+					<br><br> -->
+
+					<span>Enter github user id: </span>
+					<input v-model="userId" placeholder="github or gitlab user id">
+					<button v-on:click="fetchRepos">Fetch Repositories</button>
+					<br><br>
+					<div id="set-config-repos"> </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-view help">
+			<iframe id="preview" src="https://techtaste.me/projects/"></iframe>
+			<!-- <div id="help-view">
+				Help info
+			</div> -->
+		</div>
+
+		<!-- <iframe id="preview" src="https://techtaste.me/"></iframe> -->
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="public/js/main.js"></script>
+	<script src="public/js/post.js"></script>
+	<script src="public/js/conf.js"></script>
+	<script src="public/js/publish.js"></script>
+</body>
+</html>

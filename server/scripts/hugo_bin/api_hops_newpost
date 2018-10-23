@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# expecting <post-name> as arg.
+if [ "$#" -ne 1 ]; then
+    echo "Expecting args: <post-name>"
+    exit 1
+fi
+
+post_name=$1
+
+# goto blog dir and create post
+ cd ${BLOG_PATH}
+hugo new post/$post_name
+
+# new post creation status
+status=$?
+
+cd -
+
+# exit if creation of new post fails
+if [[ $status -ne "0" ]];
+then
+    echo "unable to create post"
+    exit $status
+fi

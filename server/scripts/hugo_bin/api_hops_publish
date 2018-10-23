@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# expecting <commit-message> as arg.
+if [ "$#" -ne 1 ]; then
+    echo "Expecting args: <commit-message>"
+    exit 1
+fi
+
+commit_message=$1
+
+cd ${BLOG_PATH} || exit 1
+# generate site
+hugo
+# add files and commit blogRepo
+git add *
+git commit -m "${commit_message}"
+# git pull
+# TODO: merge conflicts
+git push
+cd -
+
+# add files and commit siteRepo
+cd ${SITE_PATH}
+git add *
+git commit -m "${commit_message}"
+# git pull
+# TODO: merge conflicts
+git push
+cd -

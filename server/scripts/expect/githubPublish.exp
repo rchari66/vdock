@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+log_file -a "/tmp/expect.log"
+
+# TODO: edit below spawn cmd
+spawn git push
+expect "?sername*:" { send "$username\r" }
+expect "?assword*:" { send "$password\r" }
+
+send -- "exit\r"
+expect eof
