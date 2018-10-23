@@ -24,7 +24,7 @@ $ curl --header "Content-Type: application/json" \
 # I've used postman to send post request(content-type:raw) to "http://localhost:8288/api/v1/conf/updateConfig".
 
 
-# After the above curl cmd wait for it to checkout repositories from github.
+# wait.. for some time as the above curl cmd checks out repositories from github.
 
 
 # you have to manually run "hugo server"(it will be fixed soon :))
