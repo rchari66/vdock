@@ -12,4 +12,4 @@ Note:
 publishDir = "../site"
 ```
 
-More info will be added soon.
+More info on how to use `vdock-hugo` will be added soon.
