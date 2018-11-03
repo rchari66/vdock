@@ -1,8 +1,5 @@
 # vdock-hugo
 
-Note: 
-There are still couple of things to be fixed in this repo. 
-
 To run: 
 ```
 # Run container
