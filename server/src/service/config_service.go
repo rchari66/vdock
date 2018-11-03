@@ -4,7 +4,9 @@ import (
 	"misc/logger"
 	"model"
 	"net/http"
+	"os"
 	"os/exec"
+	"time"
 )
 
 type ConfigService struct{}
@@ -12,9 +14,9 @@ type ConfigService struct{}
 // return github repos for given users
 func (ghService *ConfigService) UpdateConfig(cnfConfig model.ConfigData, w http.ResponseWriter, r *http.Request) {
 	// move current blog & site repos to bkp folder.
+
 	// Checkout new repos to /ws/
 	logger.Logger("Cloning blogRepo from github")
-
 	out, err := exec.Command("api_hops_cloneBlog", cnfConfig.BlogRepo).Output()
 
 	if err != nil {
@@ -30,7 +32,7 @@ func (ghService *ConfigService) UpdateConfig(cnfConfig model.ConfigData, w http.
 
 	// store git credentials globally
 	logger.Logger("Storing git creds globally")
-	out, err = exec.Command("_api_hops_save_git_creds", cnfConfig.UserId, cnfConfig.Password, cnfConfig.Email).Output()
+	out, err = exec.Command("api_hops_save_git_creds", cnfConfig.UserId, cnfConfig.Password, cnfConfig.Email).Output()
 
 	if err != nil {
 		logger.Logger("Error: unable to store git creds")
@@ -62,16 +64,16 @@ func (ghService *ConfigService) UpdateConfig(cnfConfig model.ConfigData, w http.
 	logger.Logger("Starting hugo... ")
 
 	startCmd := exec.Command("api_hops_start_hugo")
-	startCmd.Start()
-
-	err = startCmd.Wait()
+	startCmd.Stdout = os.Stdout
+	err = startCmd.Start()
 	if err != nil {
 		logger.Logger("Error: starting hugo server")
 		logger.Logger(err)
-		w.WriteHeader(http.StatusBadRequest)
-		cleanup(cnfConfig)
-		return
 	}
+	logger.Logger("Hugo server started with pid :" + string(startCmd.Process.Pid))
+
+	time.Sleep(200 * time.Millisecond)
+	w.WriteHeader(http.StatusOK)
 }
 
 func cleanup(cnfConfig model.ConfigData) {

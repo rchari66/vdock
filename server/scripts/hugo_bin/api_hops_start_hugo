@@ -1,10 +1,13 @@
-sleep 1
-
+#!/bin/bash
 
 echo "starting hugo server"
+
 # Get ipaddress of the container and start serving site on port 8286
 ipaddr=$(ip addr show | grep eth0 -A 5  | grep "inet" | awk '{print $2}' | cut -d"/" -f1)
-cd /ws/blog/ && hugo server -b http://localhost:8286/preview/ -p 8286 --bind ${ipaddr} -w -D >> /dev/null &
+
+cd ${BLOG_PATH}
+hugo server -b http://localhost:8286/preview/ -p 8286 --bind ${ipaddr} -w -D >> /dev/null &
+
 echo "Hugo server started"
 
 #cd -

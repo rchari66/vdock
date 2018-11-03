@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# expecting <userId>, <password> as arg.
+if [ "$#" -ne 3 ]; then
+    echo "Expecting args: <userId> <password> <email>"
+    exit 1
+fi
+
+echo "Storing git creds" >> ${LOG_FILE}
+
+userId=$1
+password=$2
+email=$3
+
+git config --global user.email $email
+git config --global user.name $userId
+
+cd ${BLOG_PATH}
+
+# unset & restore git credentials globally
+git config --global --unset credential.helper
+
+# remove git credentials if stored previously
+rm ~/.git-credentials  
+
+# enable git credential cache
+git config --global credential.helper store
+
+expect ${SERVER_PATH}/scripts/expect/githubPublish.exp $userId $password
+

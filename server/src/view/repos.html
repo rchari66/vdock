@@ -3,7 +3,7 @@
     <option disabled value="">Please select blog repo</option>
 
     {{ range . }}
-        <option value="{{.CloneUrl}}"> {{ .Name }} </option>
+    <option value="{{.CloneUrl}}"> {{ .Name }} </option>
     {{ end }}
 </select>
 
@@ -12,7 +12,7 @@
     <option>master</option>
 </select>
 <br><br>
-    
+
 <span>Site Repository :</span>
 <select v-model="siteRepo">
     <option disabled value="">Please select site repo</option>
@@ -20,7 +20,7 @@
     <option value="{{.CloneUrl}}"> {{ .Name }} </option>
     {{ end }}
 </select>
-    
+
 <span>Branch :</span>
 <select>
     <option>master</option>
@@ -31,5 +31,3 @@
 <input v-model="password" type="password" placeholder="Github password">
 
 <button id="update-config-btn" v-on:click="updateConfig">Update Configure</button>
-
-

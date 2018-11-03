@@ -44,6 +44,8 @@ func (cf *ConfController) ConfigHandler(w http.ResponseWriter, r *http.Request) 
 
 		cnfService.UpdateConfig(cnfData, w, r)
 
+		logger.Logger("Updated configuration!")
+
 	default:
 		logger.Logger("Error: invalid resource requested")
 		w.WriteHeader(http.StatusNotFound)

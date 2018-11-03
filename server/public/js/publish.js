@@ -17,10 +17,10 @@ var config = new Vue({
             axios
                 .get('api/v1/publish?commitMessage=' + this.commitMessage)
                 .then(response => {
-                    this.notification = "Successfully published on to github @" + Date.now()
+                    this.notification = "Successfully published on to github @" + getDateAndTime()
                 })
                 .catch(error => {
-                    this.notification = "Failed to publish @" + Date.now()
+                    this.notification = "Failed to publish @" + getDateAndTime()
                 })
 
         }

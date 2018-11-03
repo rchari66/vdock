@@ -18,7 +18,7 @@ var post = new Vue({
             axios
                 .get('api/v1/exec/newpost?name=' + name)
                 .then(response => {
-                    this.status = "successfully created post : " + name + " @" + Date.now()
+                    this.status = "successfully created post : " + name + " @" + getDateAndTime
                 })
                 .catch(error => {
                     this.status = "Failed to create post : " + name + ". Please check the name"
