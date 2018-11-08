@@ -13,3 +13,4 @@ publishDir = "../site"
 ```
 
 More info on how to use `vdock-hugo` will be added soon.
+Note: This is a sort of framework; Which has IDE, Testing/Viewing & deploying features in one docker.
