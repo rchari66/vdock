@@ -6,8 +6,9 @@ To run:
 $ docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock-hugo
 
 ```
+
 Note:
-#In config.toml `publishDir` should point to `../site`
+#In config.toml(hugo configuration file) `publishDir` should point to `../site`.
 ```
 publishDir = "../site"
 ```
