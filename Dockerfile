@@ -24,7 +24,8 @@ RUN mkdir /ws && apt-get update -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install expect -y \
     && cat /tmp/bashrc.sh >> /root/.bashrc && rm /tmp/bashrc.sh \
     && rm /work/proxy* && rm /work/startup.sh \
-    && chmod +x $SERVER_PATH/scripts/hugo_bin/*
+    && chmod +x $SERVER_PATH/scripts/hugo_bin/* \
+    && mkdir -p /root/.c9/plugins/vdockPlugin
 
 
 EXPOSE 8288 8286
