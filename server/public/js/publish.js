@@ -12,7 +12,7 @@ var config = new Vue({
                 alert("Please enter a commit message")
                 return
             }
-            this.notification = ""
+            this.notification = "Publishing the changes. Pls wait ..."
 
             axios
                 .get('api/v1/publish?commitMessage=' + this.commitMessage)
