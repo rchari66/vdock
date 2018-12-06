@@ -64,7 +64,7 @@ Open Cloud9 menu and click on `Restart cloud9`(short cut: `command + R` for mac)
 Restart cloud9 on every edit you make to snippet file(s) in `ws/vdockPlugin/snippets/`.
 
 ---
-> Note: In config.toml(hugo configuration file) `publishDir` should point to `../site`.
+> Note: In config.toml(hugo configuration file) `publishDir` should point to `../mySite`.
 ```toml
 publishDir = "../mySite"
 ```
