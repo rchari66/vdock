@@ -16,7 +16,7 @@ $ docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock
 ```
 open : http://localhost:8288/
 
-![vdock Home page](pics/home.png)
+![Vdock Config page](pics/config.png)
 
 
 <details><summary> More Options To Run</summary>
