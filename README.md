@@ -1,6 +1,6 @@
 # vdock
 #### Intro:
-Vdock is tool with an intergrated IDE for managing [hugo](https://gohugo.io/) site efficiently. 
+Vdock is a tool with an intergrated IDE for managing [hugo](https://gohugo.io/) site efficiently. 
 <br>
 It provides features like
 * IDE to edit the blog
