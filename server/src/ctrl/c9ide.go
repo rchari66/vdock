@@ -1,10 +1,13 @@
 package ctrl
 
 import (
+	"fmt"
 	"misc/logger"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
+	"os"
+	"strings"
 )
 
 type IdeController struct{}
@@ -30,5 +33,10 @@ func initIdeProxy() *httputil.ReverseProxy {
 }
 
 func (ic *IdeController) Ide(w http.ResponseWriter, r *http.Request) {
+	if os.Getenv("ALLOW_PUBLIC_ACCESS") != "YES" && !strings.Contains(r.Host, "localhost:") {
+		fmt.Fprintf(w, " Sorry Access is blocked!! ")
+		return
+	}
+	// server ide traffic
 	ideProxy.ServeHTTP(w, r)
 }
