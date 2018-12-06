@@ -66,6 +66,6 @@ Restart cloud9 on every edit you make to snippet file(s) in `ws/vdockPlugin/snip
 ---
 > Note: In config.toml(hugo configuration file) `publishDir` should point to `../site`.
 ```toml
-publishDir = "../site"
+publishDir = "../mySite"
 ```
 

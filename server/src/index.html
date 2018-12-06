@@ -68,7 +68,7 @@
 					<button v-on:click="fetchRepos">Fetch Repositories</button>
 			
 					<br><br>
-					<span>Blog Repository :</span>
+					<span>Blog Source :</span>
 					<select v-model="blogRepo">
 						<option disabled value="">Please select blog repo</option>
 						<option v-for="repo in repos" :value="repo.clone_url">
@@ -82,7 +82,7 @@
 					</select>
 					<br><br>
 					
-					<span>Site Repository :</span>
+					<span>Blog Destination :</span>
 					<select v-model="siteRepo">
 						<option disabled value="">Please select site repo</option>
 						<option v-for="repo in repos" :value="repo.clone_url">

@@ -7,8 +7,8 @@ ENV C9_PATH /ws/
 # SERVER_ROOT_DIR
 ENV SERVER_PATH /server
 ENV HUGO_BIN ${SERVER_PATH}/scripts/hugo_bin
-ENV BLOG_PATH=/ws/blog
-ENV SITE_PATH=/ws/site
+ENV BLOG_PATH=/ws/blog-source
+ENV SITE_PATH=/ws/mySite
 
 ENV LOG_FILE=/tmp/server.log
 
