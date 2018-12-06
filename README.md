@@ -47,6 +47,16 @@ services.pluginManager.loadPackage([
     "~/.c9/plugins/vdockPlugin/package.json",
 ]);
 ```
+<details><summary>Show pics</summary>
+<p>
+##### Copy above content to init.js file
+![Open Your Init Script](pics/initjs.png)
+
+![Restart Cloud9](pics/restart.png)
+
+</P>
+</details>
+
 ##### Step 2:
 Open Cloud9 menu and click on `Restart cloud9`(short cut: `command + R` for mac). 
 Restart cloud9 on every edit you make to snippet file(s) in `ws/vdockPlugin/snippets/`.
