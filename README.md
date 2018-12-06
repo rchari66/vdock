@@ -1,6 +1,6 @@
-# vdock-hugo
+# vdock
 #### Intro:
-Vdock-hugo is a tool with intergrated IDE for managing [hugo](https://gohugo.io/) site efficiently. 
+Vdock is tool with an intergrated IDE for managing [hugo](https://gohugo.io/) site efficiently. 
 <br>
 It provides features like
 * IDE to edit the blog
@@ -12,11 +12,11 @@ It provides features like
 #### Run :
 ###### No Authentication & Deny Public Access
 ``` bash
-$ docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock-hugo
+$ docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock
 ```
 open : http://localhost:8288/
 
-![vdock-hugo Home page](pics/home.png)
+![vdock Home page](pics/home.png)
 
 
 <details><summary> More Options To Run</summary>
@@ -24,17 +24,17 @@ open : http://localhost:8288/
 
 ###### With Authentication & Deny Public Access
 ```bash
-$ docker run -td -p 8288:8288 -p 8286:8286 -e AUTH=<username>:<password> rchari/vdock-hugo
+$ docker run -td -p 8288:8288 -p 8286:8286 -e AUTH=<username>:<password> rchari/vdock
 ```
 
 ###### No Authentication & Allow Public Access
 ```bash
-$ docker run -td -p 8288:8288 -p 8286:8286 -e ALLOW_PUBLIC_ACCESS=YES rchari/vdock-hugo
+$ docker run -td -p 8288:8288 -p 8286:8286 -e ALLOW_PUBLIC_ACCESS=YES rchari/vdock
 ```
 ###### With Authentication & Allow Public Access
 ```bash
 $ docker run -td -e AUTH=<username>:<password> ALLOW_PUBLIC_ACCESS=YES \
-    -p 8288:8288 -p 8286:8286 rchari/vdock-hugo
+    -p 8288:8288 -p 8286:8286 rchari/vdock
 ```
 </p>
 </details>
