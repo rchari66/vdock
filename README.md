@@ -49,9 +49,11 @@ services.pluginManager.loadPackage([
 ```
 <details><summary>Show pics</summary>
 <p>
-##### Copy above content to init.js file
+    
+###### Copy above content to init.js file
 ![Open Your Init Script](pics/initjs.png)
-
+---
+###### Restart Cloud9
 ![Restart Cloud9](pics/restart.png)
 
 </P>
