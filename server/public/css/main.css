@@ -80,3 +80,16 @@ main div div {
 	position: absolute;
 	border: 1px solid lightgray;
 }
+
+div.split-right {
+	width: 46%;
+	padding-left: 52%;
+}
+
+div.split-right iframe {
+	width: 46%;
+}
+
+div.split-left {
+	width: 52%;
+}
