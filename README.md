@@ -112,3 +112,10 @@ for enabling github pages for your repository.
 <br>
 
 Refer : [How to Use vdock creating posts](https://techtaste.me/post/vdock-tool/)
+
+
+### TODO: Enhancements/Imporovements:
+* Support for Gitlab & Bitbucket
+* Support for dynamic services(Web services by Golang)
+* 1-Click publish to S3(aws) Bucket
+* 1-Click publish to EC2 instance
