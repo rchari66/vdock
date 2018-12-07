@@ -1,0 +1,22 @@
+{
+    "config": {
+        "init.js": {
+            "json()": "// You can access plugins via the 'services' global variable\n/*global services, plugin*/\n\n// to load plugins use\n// services.pluginManager.loadPackage([\n//     \"https://<user>.github.io/<project>/build/package.<name>.js\",\n//     \"~/.c9/plugins/<name>/package.json\",\n// ]);\n\nservices.pluginManager.loadPackage([\n    \"https://techtaste.me/vdock-plugin/c9build/package.vdockPlugin.js\",\n ]);"
+        }
+    },
+    "debug": {
+        "@pause": 0
+    },
+    "openfiles": {
+        "@show": false
+    },
+    "projecttree": {
+        "@showhidden": false
+    },
+    "tabs": {
+        "@show": true
+    },
+    "welcome": {
+        "@first": true
+    }
+}

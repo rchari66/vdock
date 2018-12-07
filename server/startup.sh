@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Download vdockPlugin for adding custom snippets
-git clone https://github.com/rchari66/vdock-plugin-cloud9.git ${C9_PATH}vdockPlugin
-cp -r cp -r ${C9_PATH}vdockPlugin /root/.c9/plugins/
-
-# cronjob for copying vdockPlugin files to c9's plugins
-while true; do cp -r ${C9_PATH}vdockPlugin ~/.c9/plugins/; sleep 1; done &
-
 # start the cloud9
 if [ -z "${AUTH}" ]
 then
