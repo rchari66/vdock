@@ -12,7 +12,7 @@ clone_url=$1
 cd ${C9_PATH}
 
 # clone blog(code) repo
-git clone --recursive ${clone_url} blog
+git clone --recursive ${clone_url} ${BLOG_PATH}
 status=$?
 
 cd -

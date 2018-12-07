@@ -11,7 +11,7 @@ clone_url=$1
 cd ${C9_PATH}
 
 # clone static site repo
-git clone ${clone_url} site
+git clone ${clone_url} ${SITE_PATH}
 
 # git clone status
 status=$?
