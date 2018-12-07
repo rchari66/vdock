@@ -116,6 +116,7 @@ Refer : [How to Use vdock creating posts](https://techtaste.me/post/vdock-tool/)
 
 ### TODO: Enhancements/Imporovements:
 * Support for Gitlab & Bitbucket
-* Support for dynamic services(Web services by Golang)
+* Enhance this tool to ease kubernetes related stuff
 * 1-Click publish to S3(aws) Bucket
 * 1-Click publish to EC2 instance
+* Support for dynamic services(Web services by Golang)
