@@ -3,7 +3,7 @@
 Vdock is a tool with an intergrated IDE for managing [hugo](https://gohugo.io/) site efficiently. 
 <br>
 It provides features like
-* IDE to edit the blog
+* Integrated IDE (Cloud9)
 * Live preview(changes)
 * 1-click to create new post
 * 1-click to publish final site to [github pages](https://pages.github.com/)
