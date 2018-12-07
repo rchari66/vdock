@@ -7,7 +7,7 @@ It provides features like
 * Live preview(changes)
 * 1-click to create new post
 * 1-click to publish final site to [github pages](https://pages.github.com/)
-
+* snippets(markdown) to ease content writing
 
 #### Run :
 ###### No Authentication & Deny Public Access
