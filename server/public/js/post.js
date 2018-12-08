@@ -9,8 +9,8 @@ var post = new Vue({
     },
     methods: {
         createPost: function () {
-            // remove .md from postname
-            var name = this.postname.replace('.md', '')
+            // remove .md and replace space with '-'
+            var name = this.postname.replace('.md', '').replace(' ', '-')
             this.status = ''
             if (name.length <1) {
                 alert("Please enter post name")
