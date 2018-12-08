@@ -9,16 +9,20 @@ It provides features like
 * 1-click to publish final site to [github pages](https://pages.github.com/)
 * snippets(markdown) to ease content writing
 
-#### Prerequisities(First time setup) : 
-###### Step 1 : Fork below repository to your Github
-> https://github.com/rchari66/hugo-sample-source
+<details><summary> Prerequisities(One time setup) </summary>
+<p>
 
-###### Step 2 : Create a new repository with name `<Github-userid>.github.io`
-If your github-userid is `rchari66` then the repository name would be
+###### Step 1 : Logon to your [Github.com](https://github.com) account.
+
+###### Step 2 : Create a repository for storing your `Blog-Source`
+
+###### Step 3 : Create a repository with name `<Github-userid>.github.io` to host your site.
+Suppose If your github-userid is `rchari66` then the repository name would be
 > rchari66.github.io
+</P>
+</details>
 
 ---
-<br>
 
 #### Run :
 ###### No Authentication & Deny Public Access
