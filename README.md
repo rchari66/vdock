@@ -111,7 +111,7 @@ for enabling github pages for your repository.
 ---
 <br>
 
-Refer : [How to Use vdock creating posts](https://techtaste.me/post/vdock-tool/)
+Refer : [How to Create blog posts Using vdock](https://techtaste.me/post/vdock-tool/)
 
 
 ### TODO: Enhancements/Imporovements:
