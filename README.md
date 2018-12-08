@@ -111,11 +111,12 @@ for enabling github pages for your repository.
 ---
 <br>
 
-Refer : [How to Use vdock creating posts](https://techtaste.me/post/vdock-tool/)
+Refer : [How to Create blog posts Using vdock](https://techtaste.me/post/vdock-tool/)
 
 
 ### TODO: Enhancements/Imporovements:
 * Support for Gitlab & Bitbucket
+* One click theme(hugo) selection
 * Enhance this tool to ease kubernetes related stuff
 * 1-Click publish to S3(aws) Bucket
 * 1-Click publish to EC2 instance
