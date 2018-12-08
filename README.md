@@ -80,7 +80,7 @@ This will create `blog-source` and `mySite` directries in the IDE.
 <details><summary>Udate Config</summary>
 <p>
 
-![Udate configuration](pics/udate-config.png)
+![Udate configuration](pics/update-config.png)
 
 
 </P>
