@@ -36,8 +36,8 @@
 		<div class="main-view post">
 			<div id="new-post">
 				<div>
-					<input v-model="postname" placeholder="post name" v-on:keyup.enter="createPost">
-					<button v-on:click="createPost">Create Post</button>
+					<input v-model="postname" placeholder="Enter post name" v-on:keyup.enter="createPost">
+					<button v-bind:class="[{ 'disabled': isCreateInProgress }, 'button']" v-on:click="createPost">Create Post</button>
 					<p> {{status}} </p>
 				</div>
 			</div>
@@ -46,8 +46,8 @@
 		<div class="main-view publish">
 			<div id="publish-changes">
 				<div>
-					<input v-model="commitMessage" placeholder="Enter commit message" v-on:keyup.enter="publishChanges">
-					<button v-on:click="publishChanges">Publish Changes</button>
+					<input v-model="commitMessage" placeholder="Enter commit msg" v-on:keyup.enter="publishChanges">
+					<button v-bind:class="[{ 'disabled': isPublishInProgress }, 'button']"  v-on:click="publishChanges">Publish Changes</button>
 					<br><br>
 					<span> {{ notification }} </span>
 				</div>
@@ -67,14 +67,14 @@
 			<div id="set-config">
 				<div>
 			
-					<span>Enter github user id: </span>
-					<input v-model="userId" placeholder="github or gitlab user id" v-on:keyup.enter="fetchRepos">
-					<button v-on:click="fetchRepos">Fetch Repositories</button>
+					<span>Github User id: </span>
+					<input v-model="userId" placeholder="Github User Id" v-on:keyup.enter="fetchRepos">
+					<button v-bind:class="[{ 'disabled': isFetching }, 'button']" v-on:click="fetchRepos" :disabled="isFetching">Fetch Repositories</button>
 			
 					<br><br>
 					<span>Blog Source :</span>
 					<select v-model="blogRepo">
-						<option disabled value="">Please select blog repo</option>
+						<option disabled value=""> Select Blog Source</option>
 						<option v-for="repo in repos" :value="repo.clone_url">
 							{{ repo.name }}
 						</option>
@@ -86,9 +86,9 @@
 					</select>
 					<br><br>
 					
-					<span>Blog Destination :</span>
+					<span>My Site Repo : </span>
 					<select v-model="siteRepo">
-						<option disabled value="">Please select site repo</option>
+						<option disabled value="">Select Site Repor</option>
 						<option v-for="repo in repos" :value="repo.clone_url">
 							{{ repo.name }}
 						</option>
@@ -100,12 +100,13 @@
 					</select>
 					<br><br>
 					
-					<span>Enter email id: </span>
-					<input v-model="emailId" placeholder="email id">
+					<span> Email id : </span>
+					<input v-model="emailId" placeholder="Email Id">
 					<br><br>
-					<span>Enter github password id: </span>
-					<input v-model="password" type="password" placeholder="Github password" v-on:keyup.enter="updateConfig">
-					<button id="update-config-btn" v-on:click="updateConfig">Update Configure</button>
+					<span> Password   : </span>
+					<input v-model="password" type="password" placeholder="Github Password" v-on:keyup.enter="updateConfig">
+					<button id="update-config-btn" v-bind:class="[{ 'disabled': isUpdateInProgress }, 'button']" 
+							v-on:click="updateConfig" :disabled="isUpdateInProgress">Update Configure</button>
 					<br><br>
 					<span> {{ notification }} </span>
 				</div>

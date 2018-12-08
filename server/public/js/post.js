@@ -1,9 +1,11 @@
+
 // vue component for post
 var post = new Vue({
     el: '#new-post',
     data: {
         postname: '',
-        status: ''
+        status: '',
+        isCreateInProgress: false
     },
     methods: {
         createPost: function () {
@@ -14,15 +16,17 @@ var post = new Vue({
                 alert("Please enter post name")
                 return
             }
+            this.isCreateInProgress = true
             // call api to create new-post
             axios
                 .get('api/v1/exec/newpost?name=' + name)
                 .then(response => {
-                    this.status = "successfully created post : " + name + " @" + getDateAndTime
+                    this.status = "successfully created post : " + name + " @" + getDateAndTime()
+                    this.isCreateInProgress = false
                 })
                 .catch(error => {
                     this.status = "Failed to create post : " + name + ". Please check the name"
-                    Console.log("Failed to created post :" + name)
+                    this.isCreateInProgress = false
                 })
 
                 this.postname = ''

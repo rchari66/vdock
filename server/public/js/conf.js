@@ -9,7 +9,9 @@ var config = new Vue({
         emailId: '',
         password: '',
         repos: [],
-        notification: ''
+        notification: '',
+        isFetching: false,
+        isUpdateInProgress: false
 
     },
     computed: {
@@ -22,6 +24,8 @@ var config = new Vue({
                 alert("Please enter userId")
                 return
             }
+            // Disable fetch button
+            this.isFetching = true
             this.notification = 'Fetching repository list ...' + " @" + getDateAndTime()
             axios
                 .get('api/v1/conf/getRepos?userId=' + name)
@@ -35,12 +39,13 @@ var config = new Vue({
                         this.repos.push(data[i])
                     }
                     this.notification = 'Fetched repository list!!' + " @" + getDateAndTime()
+                    this.isFetching = false
                 })
                 .catch(error => {
                     alert("Either invalid git userid or empty repository list")
+                    this.isFetching = false
                     Console.log("Failed to get repository list")
                 })
-
         },
         updateConfig: function () {
             // validate input length & content
@@ -52,9 +57,11 @@ var config = new Vue({
                 alert("Please enter valid repository details")
                 return
             }
+            // Disable buttons 
+            this.isFetching = true
+            this.isUpdateInProgress = true
+
             this.notification = 'Updating configuration ...' + " @" + getDateAndTime()
-
-
             axios.post('http://localhost:8288/api/v1/conf/updateConfig', {
                 "userId": this.userId,
                 "email": this.emailId,
@@ -67,13 +74,18 @@ var config = new Vue({
                     // reload the preview iframe
                     var previewFrame = document.getElementById('previewFrame');
                     previewFrame.src = previewFrame.src;
+                    // Re-enable buttons
+                    this.isFetching = false
+                    this.isUpdateInProgress = false
                 })
                 .catch(error => {
                     this.notification = "Failed to update config!" + " @" + getDateAndTime()
+                    
+                    // Re-enable buttons
+                    this.isFetching = false
+                    this.isUpdateInProgress = false
                 });
             
-            // this.notification = "Updated Successfully!" + " @" + getDateAndTime()
-            // $('#preview').attr('src', function (i, val) { return val; });
         }
     }
 
