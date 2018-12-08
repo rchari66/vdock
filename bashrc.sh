@@ -7,7 +7,7 @@ sourceUpdate() {
 sourceUpdate
 
 # Alias for git commands
-gitaliassetup() {
+setupGitAliases() {
 	alias gd='git diff'
 	alias gb='git branch --sort=creatordate'
 	alias gcm="git checkout master"
