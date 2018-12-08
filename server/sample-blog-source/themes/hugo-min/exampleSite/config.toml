@@ -1,25 +1,21 @@
-baseURL = "https://<Github-userid>.github.io/"
-publishDir = "../mySite"
-
+baseURL = "http://example.com/"
 languageCode = "en-us"
-title = "Techtaste"
-theme = "hugo-min"
-# disqusShortname = "username" # delete this to disable disqus comments
+title = "Minimal"
+theme = "minimal"
+disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
 
-
 [params]
-    author = "Chari"
-    description = "Sample hugo site"
-    githubUsername = "rchari66"
-    accent = "royalblue"
+    author = "Calin Tataru"
+    description = "Personal blog theme powered by Hugo"
+    githubUsername = "#"
+    accent = "red"
     showBorder = true
     backgroundColor = "white"
     font = "Raleway" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "yaml", "toml", "java", "bash"]
-    favicon = "img/logo.jpg"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
 
 [[menu.main]]
     url = "/"
@@ -30,38 +26,33 @@ googleAnalytics = ""
     url = "/post/"
     name = "Posts"
     weight = 2
-[[menu.main]]
-    url = "/categories/"
-    name = "Categories"
-    weight = 3
 
 [[menu.main]]
-    url = "/tags/"
-    name = "tags"
-    weight = 4
-
-[[menu.main]]
-    url = "/projects/"
+    url = "/project/"
     name = "Projects"
-    weight = 5
-
+    weight = 3
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:youremail@gmail.com"
+    url = "mailto:me@example.com"
     name = "envelope-o"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/rchari66/"
+    url = "https://github.com/username/"
     name = "github"
     weight = 2
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/raghavendra-k-17528154/"
+    url = "https://twitter.com/username/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/username/"
     name = "linkedin"
     weight = 4
 
