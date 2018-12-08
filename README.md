@@ -9,13 +9,14 @@ It provides features like
 * 1-click to publish final site to [github pages](https://pages.github.com/)
 * snippets(markdown) to ease content writing
 
-#### Prerequisite Steps:
+#### Prerequisities(First time setup) : 
 ###### Step 1 : Fork below repository to your Github
 > https://github.com/rchari66/hugo-sample-source
 
 ###### Step 2 : Create a new repository with name `<Github-userid>.github.io`
 If your github-userid is `rchari66` then the repository name would be
 > rchari66.github.io
+
 ---
 <br>
 
