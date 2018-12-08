@@ -2,7 +2,7 @@ baseURL = "https://<Github-userid>.github.io/"
 publishDir = "../mySite"
 
 languageCode = "en-us"
-title = "Techtaste"
+title = "<Techtaste>"
 theme = "hugo-min"
 # disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""

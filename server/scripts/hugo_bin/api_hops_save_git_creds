@@ -26,5 +26,14 @@ rm ~/.git-credentials
 # enable git credential cache
 git config --global credential.helper store
 
+
+# If BLOG_SOUCE is empty, then copy sample blog-source files.
+fileCount=$(ls ${BLOG_PATH} |wc -l)
+if [[ $fileCount -eq "0" ]]; then
+    cp -r ${SERVER_PATH}/sample-blog-source/* ${BLOG_PATH} 
+    git add * && git commit -m "sample site"
+fi
+
+
 expect ${SERVER_PATH}/scripts/expect/githubPublish.exp $userId $password
 

@@ -15,8 +15,6 @@ cd ${C9_PATH}
 git clone --recursive ${clone_url} ${BLOG_PATH}
 status=$?
 
-# If BLOG_SOUCE is empty, then copy sample blog-source files.
-[[ $(ls -A ${BLOG_PATH}) ]] || cp -r ${SERVER_PATH}/sample-blog-source/* ${BLOG_PATH}
 cd -
 
 # exit if git clone fails
