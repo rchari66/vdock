@@ -90,9 +90,9 @@ This will create `blog-source` and `mySite` directries in the IDE.
 <br>
 
 #### Configure config.toml(in `blog-source/config.toml`) for hugo
->  Make sure `publishDir` is set to `../mySite`.
+>  Make sure `publishDir` is set to `../MySite`.
 ```toml
-publishDir = "../mySite"
+publishDir = "../MySite"
 ```
 > Update `baseURL` to `https://<Github-userid>.github.io`.
 ```toml
