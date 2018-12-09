@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# stop hugo if its already running
+pkill hugo
+
 echo "starting hugo server"
 
 # Get ipaddress of the container and start serving site on port 8286
