@@ -124,5 +124,5 @@ Refer : [How to Create blog posts Using vdock](https://techtaste.me/post/vdock-t
 * One click theme(hugo) selection
 * Enhance this tool to ease kubernetes related stuff
 * 1-Click publish to S3(aws) Bucket
-* 1-Click to host on ec2 instance
+* 1-Click to host the static site on ec2 instance
 * Support for dynamic services(Web services by Golang)
