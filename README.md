@@ -121,6 +121,7 @@ Refer : [How to Create blog posts Using vdock](https://techtaste.me/post/vdock-t
 
 ### TODO: Enhancements/Imporovements:
 * Support for Gitlab & Bitbucket
+* Add Google analytics & disqus config to default themes.
 * One click theme(hugo) selection
 * Enhance this tool to ease kubernetes related stuff
 * 1-Click publish to S3(aws) Bucket
