@@ -34,7 +34,7 @@ open : http://localhost:8288/
 ![Vdock Config page](pics/config.png)
 
 
-<details><summary> More Options To Run</summary>
+<details><summary> Ways To Run vdock Securely</summary>
 <p>
 
 ###### With Authentication & Deny Public Access
