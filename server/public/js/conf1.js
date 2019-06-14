@@ -44,7 +44,7 @@ var config = new Vue({
             }
 
             
-            axios.post('http://localhost:8288/api/v1/conf/updateConfig', {
+            axios.post('api/v1/conf/updateConfig', {
                 "userId" : this.userId,
                 "email"  : this.email,
                 "blogRepo": this.blogRepo,
