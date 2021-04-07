@@ -8,6 +8,7 @@ ENV SERVER_PATH /server
 ENV HUGO_BIN ${SERVER_PATH}/scripts/hugo_bin
 ENV BLOG_PATH=/ws/Blog-Source
 ENV SITE_PATH=/ws/MySite
+ENV ALL_POSTS=/ws/AllPosts
 
 ENV C9_PATH /ws/
 ENV C9_HOME /root
