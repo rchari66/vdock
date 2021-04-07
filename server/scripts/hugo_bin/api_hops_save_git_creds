@@ -34,6 +34,8 @@ if [[ $fileCount -eq "0" ]]; then
     git add * && git commit -m "sample site"
 fi
 
+# Add shortcut for posts folder
+ln   -s ${BLOG_PATH}/content/post ${ALL_POSTS}
 
 expect ${SERVER_PATH}/scripts/expect/githubPublish.exp $userId $password
 
