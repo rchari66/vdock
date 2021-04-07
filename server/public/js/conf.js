@@ -73,7 +73,8 @@ var config = new Vue({
                     this.notification = "Updated Successfully!" + " @" + getDateAndTime()
                     // reload the preview iframe
                     var previewFrame = document.getElementById('previewFrame');
-                    previewFrame.src = previewFrame.src;
+                    //previewFrame.src = previewFrame.src;
+                    previewFrame.contentWindow.location.reload();
                     // Re-enable buttons
                     this.isFetching = false
                     this.isUpdateInProgress = false
