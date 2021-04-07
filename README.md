@@ -29,6 +29,10 @@ Suppose If your github-userid is `rchari66` then the repository name would be
 ``` bash
 $ docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock
 ```
+###### With Authentication & Deny Public Access
+```bash
+$ docker run -td -p 8288:8288 -p 8286:8286 -e AUTH=rchari:vdock rchari/vdock
+```
 open : http://localhost:8288/
 
 ![Vdock Config page](pics/config.png)
