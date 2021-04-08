@@ -9,6 +9,7 @@ It provides features like
 * 1-click to publish final site to [github pages](https://pages.github.com/)
 * snippets(markdown) to ease content writing
 
+<br>
 <details><summary> Prerequisities(One time setup) </summary>
 <p>
 
@@ -38,6 +39,7 @@ open : http://localhost:8288/
 ![Vdock Config page](pics/config.png)
 
 
+<br>
 <details><summary> More Ways To Run vdock Securely</summary>
 <p>
 
@@ -69,6 +71,7 @@ $ docker run -td -e AUTH=<username>:<password> ALLOW_PUBLIC_ACCESS=YES \
 
 </P>
 </details>
+<br>
 
 ###### Step 1 : Enter your github id and click `fetchRepositories` button
 <details><summary>fetch Repositories</summary>
@@ -79,6 +82,7 @@ $ docker run -td -e AUTH=<username>:<password> ALLOW_PUBLIC_ACCESS=YES \
 </P>
 </details>
 
+<br>
 
 ###### Step 2 : Select repositories and Enter Other details.
 > Select `hugo-sample-source` and `<Githuh-userid>.github.io` repos for `Blog Source:` and `Blog Destination:`
