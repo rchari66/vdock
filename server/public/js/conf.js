@@ -62,11 +62,7 @@ var config = new Vue({
             this.isUpdateInProgress = true
 
             this.notification = 'Updating configuration ...' + " @" + getDateAndTime()
-            axios.post('http://localhost:8288/api/v1/conf/updateConfig', 
-                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                {
+            axios.post('http://localhost:8288/api/v1/conf/updateConfig', {
                 "userId": this.userId,
                 "email": this.emailId,
                 "blogRepo": this.blogRepo,
@@ -85,7 +81,7 @@ var config = new Vue({
                 })
                 .catch(error => {
                     this.notification = "Failed to update config!" + " @" + getDateAndTime()
-                    
+                    console.log(JSON.stringify(error))
                     // Re-enable buttons
                     this.isFetching = false
                     this.isUpdateInProgress = false
