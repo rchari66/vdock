@@ -62,7 +62,11 @@ var config = new Vue({
             this.isUpdateInProgress = true
 
             this.notification = 'Updating configuration ...' + " @" + getDateAndTime()
-            axios.post('http://localhost:8288/api/v1/conf/updateConfig', {
+            axios.post('http://localhost:8288/api/v1/conf/updateConfig', 
+                 headers: {
+                    'Content-Type': 'application/json'
+                },
+                {
                 "userId": this.userId,
                 "email": this.emailId,
                 "blogRepo": this.blogRepo,
