@@ -1,7 +1,7 @@
 {
     "config": {
         "init.js": {
-            "json()": "// You can access plugins via the 'services' global variable\n/*global services, plugin*/\n\n// to load plugins use\n// services.pluginManager.loadPackage([\n//     \"https://<user>.github.io/<project>/build/package.<name>.js\",\n//     \"~/.c9/plugins/<name>/package.json\",\n// ]);\n\nservices.pluginManager.loadPackage([\n    \"https://techtaste.me/vdockPlugin/c9build/package.vdockPlugin.js\",\n ]);"
+            "json()": "// You can access plugins via the 'services' global variable\n/*global services, plugin*/\n\n// to load plugins use\n// services.pluginManager.loadPackage([\n//     \"https://<user>.github.io/<project>/build/package.<name>.js\",\n//     \"~/.c9/plugins/<name>/package.json\",\n// ]);\n\nservices.pluginManager.loadPackage([\n    \"https://techtaste.in/vdockPlugin/c9build/package.vdockPlugin.js\",\n ]);"
         }
     },
     "debug": {
