@@ -102,11 +102,11 @@
 					</select>
 					<br><br>
 					
-					<span> Email id : </span>
+					<span> Email id       : </span>
 					<input v-model="emailId" placeholder="Email Id">
 					<br><br>
-					<span> Password   : </span>
-					<input v-model="password" type="password" placeholder="Github Password" v-on:keyup.enter="updateConfig">
+					<span> Github Token   : </span>
+					<input v-model="password" type="password" placeholder="Github Token" v-on:keyup.enter="updateConfig">
 					<button id="update-config-btn" v-bind:class="[{ 'disabled': isUpdateInProgress }, 'button']" 
 							v-on:click="updateConfig" :disabled="isUpdateInProgress">Update Configure</button>
 					<br><br>
