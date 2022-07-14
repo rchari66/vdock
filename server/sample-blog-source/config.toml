@@ -11,7 +11,7 @@ googleAnalytics = ""
 [params]
     author = "Chari"
     description = "Sample hugo site"
-    githubUsername = "rchari66"
+    githubUsername = "<Github-userid>"
     accent = "royalblue"
     showBorder = true
     backgroundColor = "white"
@@ -56,7 +56,7 @@ googleAnalytics = ""
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/rchari66/"
+    url = "https://github.com/<Github-userid>/"
     name = "github"
     weight = 2
 

@@ -17,7 +17,7 @@ start:
 cp-github-token:
 	cat ~/.variables | tr "=" "\n" | tail -n 1 | pbcopy
 
-restart: cleanup-container start copy-git-token
+restart: cleanup start cp-git-token
 	echo "Restarted vdock. Access @ http://localhost:8288"
 
 recreate:  docker-build restart
