@@ -30,7 +30,8 @@ git config --global credential.helper store
 # If BLOG_SOUCE is empty, then copy sample blog-source files.
 fileCount=$(ls ${BLOG_PATH} |wc -l)
 if [[ $fileCount -eq "0" ]]; then
-    cp -r ${SERVER_PATH}/sample-blog-source/* ${BLOG_PATH} 
+    cp -r ${SERVER_PATH}/sample-blog-source/* ${BLOG_PATH}
+    sed -i "s/<Github-userid>/${userId}/g" ${BLOG_PATH}/config.toml 
     git add * && git commit -m "sample site"
 fi
 
