@@ -75,7 +75,7 @@ var config = new Vue({
                     var previewFrame = document.getElementById('previewFrame');
                     //previewFrame.src = previewFrame.src;
                     // previewFrame.contentWindow.location.reload();
-                    previewFrame.setAttribute("src","http://localhost:8286/preview/");
+                    previewFrame.setAttribute("src","http://localhost:8286/preview/post/");
                     // Re-enable buttons
                     this.isFetching = false
                     this.isUpdateInProgress = false
