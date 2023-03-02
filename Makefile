@@ -11,9 +11,12 @@ cleanup:
 	@echo container-id: ${CONTAINER_ID}
 	docker stop ${CONTAINER_ID} && docker rm ${CONTAINER_ID}
 
-start:
+start-test:
 	docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock:test
 	
+start:
+	docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock:test
+
 cp-github-token:
 	cat ~/.variables | tr "=" "\n" | tail -n 1 | pbcopy
 
