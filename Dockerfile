@@ -29,6 +29,7 @@ RUN mkdir /ws && apt-get update -y \
     && chmod +x $SERVER_PATH/scripts/hugo_bin/*
 
 ADD user.settings ${C9_HOME}/.c9/user.settings
+RUN sed -i -e 's/Agent.prototype.connectionTimeout = 10000;/Agent.prototype.connectionTimeout = 50000;/g' /work/c9sdk/node_modules/smith/smith.js
 
 EXPOSE 8288 8286
 

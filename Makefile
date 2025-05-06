@@ -15,10 +15,10 @@ start-test:
 	docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock:test
 	
 start:
-	docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock:test
+	docker run -td -p 8288:8288 -p 8286:8286 rchari/vdock:latest
 
 cp-github-token:
-	cat ~/.variables | tr "=" "\n" | tail -n 1 | pbcopy
+	cat ~/.variables | grep GITHUB_PERSONAL_TOKEN | tr "=" "\n" | tail -n 1 | pbcopy
 
 restart: cleanup start cp-github-token
 	echo "Restarted vdock. Access @ http://localhost:8288"
