@@ -183,7 +183,7 @@ e.g.
 
 [Techtaste] [1] is my site, which is hosted on [github] [2] pages. [Jekyll] [3] used for generating this site.
 
-[1]: http://techtaste.in "Get hands on techs"
+[1]: http://raghavxk8s.com "Get hands on techs"
 [2]: https://github.com/rchari66 "github link"
 [3]: https://jekyllrb.com/ "Learn Jekyll"
 
@@ -193,7 +193,7 @@ output of the above example
 
 > [Techtaste] [1] is my site, which is hosted on [github] [2] pages. [Jekyll] [3] used for generating this site.
 
-[1]: http://techtaste.in "Get hands on techs"
+[1]: http://raghavxk8s.com "Get hands on techs"
 [2]: https://github.com/Raghavendrak555 "github link"
 [3]: https://jekyllrb.com/ "Learn Jekyll"
 
